@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Compilación
+dist/
+
+# Registros
+npm-debug.log*
+*.log
+
+# Entorno y editores
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
