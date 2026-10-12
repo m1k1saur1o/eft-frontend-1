@@ -22,7 +22,7 @@ function validateGame(values) {
     errors.description = 'La descripción debe tener al menos 10 caracteres.';
   }
   if (!availableImages.some((image) => image.path === values.image)) {
-    errors.image = 'Selecciona una imagen de la carpeta img/.';
+    errors.image = 'Selecciona una portada.';
   }
   return errors;
 }
@@ -66,12 +66,7 @@ export default function GameForm({ categories, onAddGame, onResetCatalog }) {
 
   return (
     <div className="panel">
-      <form onSubmit={handleSubmit} noValidate aria-describedby="game-form-help">
-        <p id="game-form-help" className="form-help">
-          Todos los campos, excepto la plataforma, son obligatorios. Las portadas solo pueden
-          elegirse entre las imágenes existentes en la carpeta <code>img/</code>.
-        </p>
-
+      <form onSubmit={handleSubmit} noValidate>
         <div className="row g-4">
           <div className="col-md-8">
             <div className="row g-3">
